@@ -40,6 +40,12 @@ namespace JPII_Metody_rozszerzajace
             string str = textBox_input.Text;
             textBox_output.Text = str.WordCounter().ToString();
         }
+
+        private void but_letterCounter_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.LetterCounter().ToString();
+        }
     }
 
     public static class StringParserHelper
@@ -87,7 +93,6 @@ namespace JPII_Metody_rozszerzajace
         public static string RemoveVolwes(this string inputString)
         {
             const string _vowels = "aeiouyAEIOUY";
-            //inputString.Where((x) => !_vowels.Contains(x)).ToArray();
             return new string (inputString.Where((x) => !_vowels.Contains(x)).ToArray());
         }
 
@@ -95,6 +100,16 @@ namespace JPII_Metody_rozszerzajace
         {
             return inputString.Split(new char[] { ' ', '.', '?', '!', ',', ';', ':' }, 
                 StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+
+        public static  string LetterCounter(this string inputString)
+        {
+            string str = "";
+            inputString.Split(' ').ToList().ForEach(value =>
+            {
+                str += value.Length + " ";
+            });
+            return str;
         }
     }
 }

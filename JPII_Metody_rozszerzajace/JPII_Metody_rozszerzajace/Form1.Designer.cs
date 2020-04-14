@@ -106,6 +106,7 @@
             this.but_letterCounter.TabIndex = 6;
             this.but_letterCounter.Text = "[Ala - 3] [ma -2] [kota -4]";
             this.but_letterCounter.UseVisualStyleBackColor = true;
+            this.but_letterCounter.Click += new System.EventHandler(this.but_letterCounter_Click);
             // 
             // button6
             // 
