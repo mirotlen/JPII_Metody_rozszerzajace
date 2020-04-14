@@ -86,6 +86,7 @@
             this.but_removeVolwes.TabIndex = 4;
             this.but_removeVolwes.Text = "l m kt";
             this.but_removeVolwes.UseVisualStyleBackColor = true;
+            this.but_removeVolwes.Click += new System.EventHandler(this.but_removeVolwes_Click);
             // 
             // but_wordCounter
             // 
@@ -95,6 +96,7 @@
             this.but_wordCounter.TabIndex = 5;
             this.but_wordCounter.Text = "Ala ma kota = 3";
             this.but_wordCounter.UseVisualStyleBackColor = true;
+            this.but_wordCounter.Click += new System.EventHandler(this.but_wordCounter_Click);
             // 
             // but_letterCounter
             // 

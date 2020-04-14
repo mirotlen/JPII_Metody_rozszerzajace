@@ -28,6 +28,18 @@ namespace JPII_Metody_rozszerzajace
             string str = textBox_input.Text;
             textBox_output.Text = str.FirstCharToUpperCase();
         }
+
+        private void but_removeVolwes_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.RemoveVolwes().ToString();
+        }
+
+        private void but_wordCounter_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.WordCounter().ToString();
+        }
     }
 
     public static class StringParserHelper
@@ -70,6 +82,19 @@ namespace JPII_Metody_rozszerzajace
                 result += str + " ";
             }
             return result;
+        }
+
+        public static string RemoveVolwes(this string inputString)
+        {
+            const string _vowels = "aeiouyAEIOUY";
+            //inputString.Where((x) => !_vowels.Contains(x)).ToArray();
+            return new string (inputString.Where((x) => !_vowels.Contains(x)).ToArray());
+        }
+
+        public static int WordCounter(this string inputString)
+        {
+            return inputString.Split(new char[] { ' ', '.', '?', '!', ',', ';', ':' }, 
+                StringSplitOptions.RemoveEmptyEntries).Length;
         }
     }
 }
