@@ -76,6 +76,7 @@
             this.but_1char_Uppercase.TabIndex = 3;
             this.but_1char_Uppercase.Text = "Ala Ma Kota";
             this.but_1char_Uppercase.UseVisualStyleBackColor = true;
+            this.but_1char_Uppercase.Click += new System.EventHandler(this.but_1char_Uppercase_Click);
             // 
             // but_removeVolwes
             // 

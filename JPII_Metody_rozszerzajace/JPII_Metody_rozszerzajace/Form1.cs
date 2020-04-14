@@ -22,6 +22,12 @@ namespace JPII_Metody_rozszerzajace
             string str = textBox_input.Text;
             textBox_output.Text = str.CharToUpperCase();
         }
+
+        private void but_1char_Uppercase_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.FirstCharToUpperCase();
+        }
     }
 
     public static class StringParserHelper
@@ -44,9 +50,26 @@ namespace JPII_Metody_rozszerzajace
             return outputString;
         }
 
-        //public static string FirstCharToUpperCase (this string inputString)
-        //{
-
-        //}
+        public static string FirstCharToUpperCase(this string inputString)
+        {
+            List<string> outputString = inputString.Split(' ').ToList();
+            string result = "";
+            foreach (string inputChar in outputString)
+            {
+                string str = "";
+                for (int i = 0; i < inputChar.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        str += inputChar[i].ToString().ToUpper();
+                    }
+                    else{
+                        str += inputChar[i].ToString();
+                    }
+                }
+                result += str + " ";
+            }
+            return result;
+        }
     }
 }
