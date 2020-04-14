@@ -36,7 +36,7 @@
             this.but_wordCounter = new System.Windows.Forms.Button();
             this.but_letterCounter = new System.Windows.Forms.Button();
             this.but_SentenceChecker = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.but_MegaLicznik = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -118,14 +118,15 @@
             this.but_SentenceChecker.UseVisualStyleBackColor = true;
             this.but_SentenceChecker.Click += new System.EventHandler(this.but_SentenceChecker_Click);
             // 
-            // button7
+            // but_MegaLicznik
             // 
-            this.button7.Location = new System.Drawing.Point(449, 93);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(131, 41);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Ala ma kota (a - 4 powtórzenia)";
-            this.button7.UseVisualStyleBackColor = true;
+            this.but_MegaLicznik.Location = new System.Drawing.Point(449, 93);
+            this.but_MegaLicznik.Name = "but_MegaLicznik";
+            this.but_MegaLicznik.Size = new System.Drawing.Size(131, 41);
+            this.but_MegaLicznik.TabIndex = 8;
+            this.but_MegaLicznik.Text = "Ala ma kota (a - 4 powtórzenia)";
+            this.but_MegaLicznik.UseVisualStyleBackColor = true;
+            this.but_MegaLicznik.Click += new System.EventHandler(this.but_MegaLicznik_Click);
             // 
             // button8
             // 
@@ -152,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(609, 300);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.but_MegaLicznik);
             this.Controls.Add(this.but_SentenceChecker);
             this.Controls.Add(this.but_letterCounter);
             this.Controls.Add(this.but_wordCounter);
@@ -178,7 +179,7 @@
         private System.Windows.Forms.Button but_wordCounter;
         private System.Windows.Forms.Button but_letterCounter;
         private System.Windows.Forms.Button but_SentenceChecker;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button but_MegaLicznik;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
     }

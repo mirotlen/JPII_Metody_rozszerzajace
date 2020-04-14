@@ -52,6 +52,13 @@ namespace JPII_Metody_rozszerzajace
             string str = textBox_input.Text;
             textBox_output.Text = str.SentenceChecker().ToString();
         }
+
+        private void but_MegaLicznik_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.MegaLettersChecker().ToString();
+
+        }
     }
 
     public static class StringParserHelper
@@ -129,5 +136,37 @@ namespace JPII_Metody_rozszerzajace
                 return false;
             }
         }
+
+        public static string MegaLettersChecker (this string inputString)
+        {
+            Dictionary<char, int> dic = new Dictionary<char, int>();
+            foreach(char inputChar in inputString)
+            {
+                if (dic.ContainsKey(inputChar))
+                {
+                    dic[inputChar] ++;
+                }
+                else
+                {
+                    dic.Add(inputChar, 1);
+                }
+            }
+            string result = "";
+            dic.Keys.ToList().ForEach(value => {
+                int i = 0;
+                if (value == ' ')
+                {
+                    result += "space:";
+                }
+                else
+                {
+                    result += value.ToString() + ':';
+                }
+                dic.TryGetValue(value, out i);
+                result += i.ToString()+ ' ';
+                });
+            return result;
+        }
+
     }
 }
