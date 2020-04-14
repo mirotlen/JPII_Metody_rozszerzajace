@@ -35,7 +35,7 @@
             this.but_removeVolwes = new System.Windows.Forms.Button();
             this.but_wordCounter = new System.Windows.Forms.Button();
             this.but_letterCounter = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.but_SentenceChecker = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -108,14 +108,15 @@
             this.but_letterCounter.UseVisualStyleBackColor = true;
             this.but_letterCounter.Click += new System.EventHandler(this.but_letterCounter_Click);
             // 
-            // button6
+            // but_SentenceChecker
             // 
-            this.button6.Location = new System.Drawing.Point(449, 46);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 41);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Ala ma kota. - zdanie = true";
-            this.button6.UseVisualStyleBackColor = true;
+            this.but_SentenceChecker.Location = new System.Drawing.Point(449, 46);
+            this.but_SentenceChecker.Name = "but_SentenceChecker";
+            this.but_SentenceChecker.Size = new System.Drawing.Size(131, 41);
+            this.but_SentenceChecker.TabIndex = 7;
+            this.but_SentenceChecker.Text = "Ala ma kota. - zdanie = true";
+            this.but_SentenceChecker.UseVisualStyleBackColor = true;
+            this.but_SentenceChecker.Click += new System.EventHandler(this.but_SentenceChecker_Click);
             // 
             // button7
             // 
@@ -152,7 +153,7 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.but_SentenceChecker);
             this.Controls.Add(this.but_letterCounter);
             this.Controls.Add(this.but_wordCounter);
             this.Controls.Add(this.but_removeVolwes);
@@ -176,7 +177,7 @@
         private System.Windows.Forms.Button but_removeVolwes;
         private System.Windows.Forms.Button but_wordCounter;
         private System.Windows.Forms.Button but_letterCounter;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button but_SentenceChecker;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;

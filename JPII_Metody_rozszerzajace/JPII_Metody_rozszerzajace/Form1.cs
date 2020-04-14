@@ -46,6 +46,12 @@ namespace JPII_Metody_rozszerzajace
             string str = textBox_input.Text;
             textBox_output.Text = str.LetterCounter().ToString();
         }
+
+        private void but_SentenceChecker_Click(object sender, EventArgs e)
+        {
+            string str = textBox_input.Text;
+            textBox_output.Text = str.SentenceChecker().ToString();
+        }
     }
 
     public static class StringParserHelper
@@ -110,6 +116,18 @@ namespace JPII_Metody_rozszerzajace
                 str += value.Length + " ";
             });
             return str;
+        }
+
+        public static bool SentenceChecker (this string inputString)
+        {
+            if (Char.IsUpper(inputString[0]) && inputString[inputString.Length-1] == '.')
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
